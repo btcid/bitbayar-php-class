@@ -8,8 +8,10 @@ Download the latest version of the Bitbayar PHP class with:
 
     https://github.com/btcid/bitbayar-php-class/archive/master.zip
 Or
+
     git clone https://github.com/btcid/bitbayar-php-class
 Then, add the following to your PHP script:
+
     require_once("/path/to/bitbayar-php/lib/bitbayar.php');
 
 
@@ -18,10 +20,10 @@ Then, add the following to your PHP script:
 ### Check your balance
 
 ```php
-$token = 'S82EFDBBE2CFFEC683925AB67FA41AD46';
-
+$token = 'GD1FA2CC2A3357FDF45B84744FFF7102';
 $bitbayar = new Bitbayar($token);
 $acc_balances = json_decode($bitbayar->balances()); 
+
 echo $acc_balances->balances->idr . " IDR";
 // '75.500 IDR'
 echo $acc_balances->balances->btc . " BTC";
